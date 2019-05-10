@@ -67,9 +67,13 @@ var board = {
       hidden: true,
     }
   ]
-
-
 }
+
+function board(){
+  
+}
+
+
 
 function startGame () {
 
@@ -97,12 +101,6 @@ function checkForWin () {
 
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
-    
-    var hasntWonYet = true;
-    if (!hasntWonYet) {
-      
-    }
-  
 
     //if cell is a mine & its not marked then you havent won soz
     //check if all mines are marked
@@ -139,17 +137,15 @@ function countSurroundingMines (cell) {
   var surrounding = lib.getSurroundingCells(cell.row, cell.col);
   var count = 0;
 
-  // console.log(surrounding[1].isMine)
-
   for (let i = 0; i < surrounding.length; i++) {
     const element = surrounding[i];
 
     if (element.isMine) {
       ++count;
-      // console.log('count ' + count)
+      console.log('count ' + count)
     }
     
-    // return cell.isMine
+    return count
   }
 }
 
